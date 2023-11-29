@@ -2,21 +2,24 @@ package xunit;
 
 public class TestCaseTest extends TestCase {
 
+    private WasRun wasRun;
+
     public TestCaseTest(final String name) {
         super(name);
     }
 
-    public void testRunning() {
-        final WasRun wasRun = new WasRun("testMethod");
+    @Override
+    public void setUp() {
+        this.wasRun = new WasRun("testMethod");
+    }
 
+    public void testRunning() {
         Assert.assertEquals(false, wasRun.isWasRun());
         wasRun.run();
         Assert.assertEquals(true, wasRun.isWasRun());
     }
 
     public void testSetUp() {
-        final WasRun wasRun = new WasRun("testMethod");
-
         Assert.assertEquals(false, wasRun.isWasSetUp());
         wasRun.run();
         Assert.assertEquals(true, wasRun.isWasSetUp());
