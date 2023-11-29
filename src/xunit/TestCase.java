@@ -16,7 +16,10 @@ public class TestCase {
      * <p>
      * setUp() can be overridden by subclasses to set up the test fixture.
      */
-    public void run() {
+    public TestResult run() {
+        final TestResult testResult = new TestResult();
+        testResult.testStarted();
+
         setUp();
 
         try {
@@ -27,6 +30,8 @@ public class TestCase {
         }
 
         tearDown();
+
+        return testResult;
     }
 
     public void setUp() {
