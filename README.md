@@ -12,6 +12,9 @@ Supported features:
 - [x] Run tearDown() after test method
     - [ ] Must be run even if the test method fails
 - [x] Collect test results
+- [x] Run TestSuite a collection of test cases and test suites
+    - [x] Collect test cases
+    - [x] Collect test suites
 
 ## About
 

@@ -9,6 +9,7 @@ public class TestResult {
         runCount++;
     }
 
+    // TODO: Log failed test method names and causes.
     public void testFailed() {
         errorCount++;
     }

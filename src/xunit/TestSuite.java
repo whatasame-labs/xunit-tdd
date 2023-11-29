@@ -3,11 +3,11 @@ package xunit;
 import java.util.HashSet;
 import java.util.Set;
 
-public class TestSuite {
+public class TestSuite implements Test {
 
-    private final Set<TestCase> tests = new HashSet<>();
+    private final Set<Test> tests = new HashSet<>();
 
-    public void add(final TestCase test) {
+    public void add(final Test test) {
         this.tests.add(test);
     }
 
@@ -15,7 +15,7 @@ public class TestSuite {
      * Collecting parameter pattern.
      */
     public void run(final TestResult testResult) {
-        for (TestCase test : tests) {
+        for (Test test : tests) {
             test.run(testResult);
         }
     }
