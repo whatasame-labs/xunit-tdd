@@ -10,14 +10,16 @@ public class WasRun extends TestCase {
 
     @Override
     public void setUp() {
-        this.log = "setUp";
+        this.log = "setUp ";
     }
 
     public void testMethod() {
-        this.log += " testMethod";
+        // test something
+
+        this.log += "testMethod ";
     }
 
     public String getLog() {
-        return log;
+        return log.trim();
     }
 }
