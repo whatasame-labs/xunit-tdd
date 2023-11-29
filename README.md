@@ -8,11 +8,13 @@ Supported features:
 
 - [x] Run testable method
     - [x] Support annotation based test
+    - [ ] Throw exception if test method is not found
 - [x] Run setUp() before testable method
     - [x] Must be run before each testable method
 - [x] Run tearDown() after testable method
     - [ ] Must be run even if the testable method fails
 - [x] Collect testable results
+    - [ ] Collect failed test method names and causes.
 - [x] Run TestSuite a collection of testable cases and testable suites
     - [x] Collect testable cases
     - [x] Collect testable suites

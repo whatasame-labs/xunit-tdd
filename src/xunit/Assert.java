@@ -2,6 +2,7 @@ package xunit;
 
 import java.util.Objects;
 
+// TODO: rename to Assertions
 public class Assert {
 
     public static void assertEquals(final Object expected, final Object actual) {
