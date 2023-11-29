@@ -9,7 +9,7 @@ Supported features:
 - [x] Run test method
 - [x] Run setUp() before test method
     - [x] Must be run before each test method
-- [ ] Run tearDown() after test method
+- [x] Run tearDown() after test method
     - [ ] Must be run even if the test method fails
 - [ ] Collect test results
 
