@@ -2,27 +2,22 @@ package xunit;
 
 public class WasRun extends TestCase {
 
-    private boolean wasRun = false; // Collect test was run
-    private boolean wasSetUp = false; // Collect test was set up
+    private String log = ""; // Collect test log
 
     public WasRun(final String name) {
         super(name);
     }
 
-    public void testMethod() {
-        this.wasRun = true;
-    }
-
     @Override
     public void setUp() {
-        this.wasSetUp = true;
+        this.log = "setUp";
     }
 
-    public boolean isWasRun() {
-        return wasRun;
+    public void testMethod() {
+        this.log += " testMethod";
     }
 
-    public boolean isWasSetUp() {
-        return wasSetUp;
+    public String getLog() {
+        return log;
     }
 }
