@@ -2,18 +2,20 @@ package xunit;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
+import xunit.annotation.Test;
 
-public class TestSuite implements Test {
+public class TestSuite implements Testable {
 
-    private final Set<Test> tests = new HashSet<>();
+    private final Set<Testable> tests = new HashSet<>();
 
     public TestSuite() {
     }
 
     public TestSuite(final Class<? extends TestCase> testClass) {
         Arrays.stream(testClass.getMethods())
-                .filter(method -> method.getName().startsWith("test"))
+                .filter(method -> Objects.nonNull(method.getAnnotation(Test.class)))
                 .forEach(method -> {
                     try {
                         add(testClass.getConstructor(String.class).newInstance(method.getName()));
@@ -23,7 +25,7 @@ public class TestSuite implements Test {
                 });
     }
 
-    public void add(final Test test) {
+    public void add(final Testable test) {
         this.tests.add(test);
     }
 
@@ -31,7 +33,7 @@ public class TestSuite implements Test {
      * Collecting parameter pattern.
      */
     public void run(final TestResult testResult) {
-        for (Test test : tests) {
+        for (Testable test : tests) {
             test.run(testResult);
         }
     }
