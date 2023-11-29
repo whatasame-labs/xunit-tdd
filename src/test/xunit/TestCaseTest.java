@@ -1,7 +1,5 @@
 package xunit;
 
-import xunit.annotation.Test;
-
 public class TestCaseTest extends TestCase {
 
     public TestCaseTest(final String name) {

@@ -1,4 +1,6 @@
-package xunit;
+import xunit.TestCaseTest;
+import xunit.TestResult;
+import xunit.TestSuite;
 
 public class XUnitTest {
 

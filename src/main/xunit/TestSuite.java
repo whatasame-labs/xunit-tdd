@@ -4,7 +4,6 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
-import xunit.annotation.Test;
 
 public class TestSuite implements Testable {
 
