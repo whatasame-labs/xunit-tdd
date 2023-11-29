@@ -4,7 +4,7 @@ import java.lang.reflect.Method;
 
 public class TestCase implements Testable {
 
-    protected final String name;
+    protected final String name; // TODO: rename to testMethodName
 
     public TestCase(final String name) {
         this.name = name;
