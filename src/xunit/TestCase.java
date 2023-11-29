@@ -16,7 +16,7 @@ public class TestCase {
             final Method method = this.getClass().getMethod(name);
             method.invoke(this);
         } catch (NoSuchMethodException | IllegalAccessException | InvocationTargetException e) {
-            throw new IllegalArgumentException("No such method: " + name, e);
+            throw new RuntimeException(e);
         }
     }
 }
