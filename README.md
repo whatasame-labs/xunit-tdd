@@ -7,7 +7,7 @@ This project is a TDD implementation of the xUnit testing framework using pure J
 Supported features:
 
 - [x] Run test method
-- [ ] Run setUp() before test method
+- [x] Run setUp() before test method
 - [ ] Run tearDown() after test method
     - [ ] Must be run even if the test method fails
 - [ ] Collect test results
