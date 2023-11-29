@@ -15,6 +15,7 @@ Supported features:
 - [x] Run TestSuite a collection of test cases and test suites
     - [x] Collect test cases
     - [x] Collect test suites
+    - [ ] Support recognizing test annotations
 
 ## About
 
