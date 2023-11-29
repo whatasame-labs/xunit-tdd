@@ -1,21 +1,18 @@
 package xunit;
 
-import java.util.Set;
-
 public class XUnitTest {
 
     public static void main(String[] args) {
-        final Set<String> testMethods = Set.of(
-                "testTemplateMethod",
-                "testResult",
-                "testFailedResultFormatting",
-                "testFailedResult"
-        );
+        final TestSuite testSuite = new TestSuite();
+        testSuite.add(new TestCaseTest("testTemplateMethod"));
+        testSuite.add(new TestCaseTest("testResult"));
+        testSuite.add(new TestCaseTest("testFailedResultFormatting"));
+        testSuite.add(new TestCaseTest("testFailedResult"));
+        testSuite.add(new TestCaseTest("testSuite"));
 
-        for (String testMethod : testMethods) {
-            final TestResult testResult = new TestCaseTest(testMethod).run();
+        final TestResult testResult = new TestResult();
+        testSuite.run(testResult);
 
-            System.out.println(testMethod + "\n\t -> " + testResult.getSummary());
-        }
+        System.out.println(testResult.getSummary()); // TODO: Log failed test method names.
     }
 }
