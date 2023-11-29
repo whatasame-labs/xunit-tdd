@@ -9,8 +9,16 @@ public class TestCaseTest extends TestCase {
     public void testRunning() {
         final WasRun wasRun = new WasRun("testMethod");
 
-        Assert.assertEquals(false, wasRun.wasRun()); // OK
+        Assert.assertEquals(false, wasRun.isWasRun());
         wasRun.run();
-        Assert.assertEquals(true, wasRun.wasRun()); // OK
+        Assert.assertEquals(true, wasRun.isWasRun());
+    }
+
+    public void testSetUp() {
+        final WasRun wasRun = new WasRun("testMethod");
+
+        Assert.assertEquals(false, wasRun.isWasSetUp());
+        wasRun.run();
+        Assert.assertEquals(true, wasRun.isWasSetUp());
     }
 }
