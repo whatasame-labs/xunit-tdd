@@ -13,12 +13,7 @@ public class TestCaseTest extends TestCase {
         this.wasRun = new WasRun("testMethod");
     }
 
-    public void testRunning() {
-        wasRun.run();
-        Assert.assertEquals("setUp testMethod", wasRun.getLog());
-    }
-
-    public void testSetUp() {
+    public void testTemplateMethod() {
         wasRun.run();
         Assert.assertEquals("setUp testMethod", wasRun.getLog());
     }

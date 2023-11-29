@@ -11,6 +11,11 @@ public class TestCase {
         this.name = name;
     }
 
+    /**
+     * This method is the template method pattern.
+     * <p>
+     * setUp() can be overridden by subclasses to set up the test fixture.
+     */
     public void run() {
         setUp();
 
@@ -23,5 +28,6 @@ public class TestCase {
     }
 
     public void setUp() {
+        // Subclasses can override this method to perform any necessary setup operations.
     }
 }
