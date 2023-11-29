@@ -13,6 +13,11 @@ public class WasRun extends TestCase {
         this.log = "setUp ";
     }
 
+    @Override
+    public void tearDown() {
+        this.log += "tearDown";
+    }
+
     public void testMethod() {
         // test something
 
