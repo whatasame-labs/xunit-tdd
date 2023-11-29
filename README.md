@@ -11,7 +11,7 @@ Supported features:
     - [x] Must be run before each test method
 - [x] Run tearDown() after test method
     - [ ] Must be run even if the test method fails
-- [ ] Collect test results
+- [x] Collect test results
 
 ## About
 

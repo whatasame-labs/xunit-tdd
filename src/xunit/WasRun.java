@@ -24,6 +24,10 @@ public class WasRun extends TestCase {
         this.log += "testMethod ";
     }
 
+    public void testBrokenMethod() {
+        throw new RuntimeException();
+    }
+
     public String getLog() {
         return log.trim();
     }
