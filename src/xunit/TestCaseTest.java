@@ -14,14 +14,12 @@ public class TestCaseTest extends TestCase {
     }
 
     public void testRunning() {
-        Assert.assertEquals(false, wasRun.isWasRun());
         wasRun.run();
-        Assert.assertEquals(true, wasRun.isWasRun());
+        Assert.assertEquals("setUp testMethod", wasRun.getLog());
     }
 
     public void testSetUp() {
-        Assert.assertEquals(false, wasRun.isWasSetUp());
         wasRun.run();
-        Assert.assertEquals(true, wasRun.isWasSetUp());
+        Assert.assertEquals("setUp testMethod", wasRun.getLog());
     }
 }
