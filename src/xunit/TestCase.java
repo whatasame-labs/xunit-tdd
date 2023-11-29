@@ -2,7 +2,7 @@ package xunit;
 
 import java.lang.reflect.Method;
 
-public class TestCase implements Test {
+public class TestCase implements Testable {
 
     protected final String name;
 

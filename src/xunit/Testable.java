@@ -1,6 +1,6 @@
 package xunit;
 
-public interface Test {
+public interface Testable {
 
     void run(TestResult testResult);
 }
