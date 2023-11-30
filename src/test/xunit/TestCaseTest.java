@@ -17,7 +17,7 @@ public class TestCaseTest extends TestCase {
         final TestResult result = new TestResult();
         wasRun.run(result);
 
-        Assert.assertEquals("setUp testMethod tearDown", wasRun.getLog());
+        Asserts.assertEquals("setUp testMethod tearDown", wasRun.getLog());
     }
 
     @Test
@@ -27,7 +27,7 @@ public class TestCaseTest extends TestCase {
         final TestResult result = new TestResult();
         wasRun.run(result);
 
-        Assert.assertEquals("1 run, 0 failed", result.getSummary());
+        Asserts.assertEquals("1 run, 0 failed", result.getSummary());
     }
 
     @Test
@@ -37,7 +37,7 @@ public class TestCaseTest extends TestCase {
         result.testStarted();
         result.testFailed();
 
-        Assert.assertEquals("1 run, 1 failed", result.getSummary());
+        Asserts.assertEquals("1 run, 1 failed", result.getSummary());
     }
 
     @Test
@@ -47,7 +47,7 @@ public class TestCaseTest extends TestCase {
         final TestResult result = new TestResult();
         wasRun.run(result);
 
-        Assert.assertEquals("1 run, 1 failed", result.getSummary());
+        Asserts.assertEquals("1 run, 1 failed", result.getSummary());
     }
 
     // TODO: If there is no test method matching name, is it guaranteed that tearDown() is run?
@@ -62,6 +62,6 @@ public class TestCaseTest extends TestCase {
         final TestResult result = new TestResult();
         suite.run(result);
 
-        Assert.assertEquals("2 run, 1 failed", result.getSummary());
+        Asserts.assertEquals("2 run, 1 failed", result.getSummary());
     }
 }
