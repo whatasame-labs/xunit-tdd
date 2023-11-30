@@ -2,8 +2,8 @@ package xunit;
 
 public class TestCaseTest extends TestCase {
 
-    public TestCaseTest(final String name) {
-        super(name);
+    public TestCaseTest(final String testMethodName) {
+        super(testMethodName);
     }
 
     public static TestSuite suite() {

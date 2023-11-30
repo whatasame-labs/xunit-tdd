@@ -4,10 +4,10 @@ import java.lang.reflect.Method;
 
 public class TestCase implements Testable {
 
-    protected final String name; // TODO: rename to testMethodName
+    private final String testMethodName;
 
-    public TestCase(final String name) {
-        this.name = name;
+    public TestCase(final String testMethodName) {
+        this.testMethodName = testMethodName;
     }
 
     /**
@@ -21,7 +21,7 @@ public class TestCase implements Testable {
         setUp();
 
         try {
-            final Method method = this.getClass().getMethod(name);
+            final Method method = this.getClass().getMethod(testMethodName);
             method.invoke(this);
         } catch (final Exception e) {
             testResult.testFailed();

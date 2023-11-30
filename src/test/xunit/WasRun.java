@@ -4,8 +4,8 @@ public class WasRun extends TestCase {
 
     private String log = ""; // Collect test log
 
-    public WasRun(final String name) {
-        super(name);
+    public WasRun(final String testMethodName) {
+        super(testMethodName);
     }
 
     @Override
