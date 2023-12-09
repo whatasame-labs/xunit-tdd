@@ -1,4 +1,4 @@
-package xunit.annotation;
+package xunit;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

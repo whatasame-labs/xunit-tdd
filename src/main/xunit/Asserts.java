@@ -2,8 +2,10 @@ package xunit;
 
 import java.util.Objects;
 
-// TODO: rename to Assertions
-public class Assert {
+public class Asserts {
+
+    protected Asserts() {
+    }
 
     public static void assertEquals(final Object expected, final Object actual) {
         if (!Objects.equals(expected, actual)) {
