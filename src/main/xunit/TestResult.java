@@ -2,6 +2,8 @@ package xunit;
 
 public class TestResult {
 
+    // TODO: Can not get result before test is run.
+
     private int runCount = 0;
     private int errorCount = 0;
 

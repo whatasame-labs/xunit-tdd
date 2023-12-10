@@ -1,8 +1,16 @@
 package xunit;
 
+/**
+ * The WasRun class is a subclass of TestCase and represents a test case that can be run. It contains methods to set up
+ * the test fixture, tear down the test fixture, and perform test methods.
+ * <p>
+ * This is similar to JUnit's each test class.
+ */
 public class WasRun extends TestCase {
 
-    private String log = ""; // Collect test log
+    private static int num1;
+    private static int num2;
+    private static int sum = 0;
 
     public WasRun(final String testMethodName) {
         super(testMethodName);
@@ -10,25 +18,38 @@ public class WasRun extends TestCase {
 
     @Override
     public void setUp() {
-        this.log = "setUp ";
+        num1 = 100;
+        num2 = 0;
     }
 
     @Override
     public void tearDown() {
-        this.log += "tearDown";
+        sum = 0;
     }
 
+    @Test
     public void testMethod() {
-        // test something
+        /* given */
+        num2 = 200;
 
-        this.log += "testMethod ";
+        /* then */
+        sum += num1;
+        sum += num2;
+
+        /* when */
+        Asserts.assertEquals(300, sum);
     }
 
+    @Test
     public void testBrokenMethod() {
-        throw new RuntimeException();
-    }
+        /* given */
+        num2 = 200;
 
-    public String getLog() {
-        return log.trim();
+        /* then */
+        sum += num1;
+        sum += num2;
+
+        /* when */
+        Asserts.assertEquals(777, sum); // Wrong assertion
     }
 }

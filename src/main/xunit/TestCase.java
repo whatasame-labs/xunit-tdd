@@ -13,7 +13,7 @@ public class TestCase implements Testable {
     /**
      * This method is the template method pattern.
      * <p>
-     * setUp() can be overridden by subclasses to set up the test fixture.
+     * setUp() and tearDown() can be overridden by subclasses to set up the test fixture.
      */
     public void run(final TestResult testResult) {
         testResult.testStarted();
